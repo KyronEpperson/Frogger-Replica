@@ -14,6 +14,8 @@ public class Frog : MonoBehaviour
             rb.MovePosition(rb.position + Vector2.up);
         else if (Input.GetKeyDown(KeyCode.DownArrow))
             rb.MovePosition(rb.position + Vector2.down);
+
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -2f, 2f), Mathf.Clamp(transform.position.y, -4f, 4f), transform.position.z);
     }
 
     void OnTriggerEnter2D (Collider2D col)

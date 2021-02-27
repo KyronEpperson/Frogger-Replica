@@ -19,5 +19,12 @@ public class Car : MonoBehaviour
     {
         Vector2 forward = new Vector2(transform.right.x, transform.right.y);
         rb.MovePosition(rb.position + forward * Time.fixedDeltaTime * speed);
+
+        Destroy(gameObject, 2f); //destroy gameobject after 2 seconds
+
+
+
     }
+
+
 }
